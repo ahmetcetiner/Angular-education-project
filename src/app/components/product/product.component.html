@@ -1,1 +1,20 @@
-<p>product works!</p>
+<h3 *ngIf="products" class="m-5">{{title}}</h3>
+
+<div class="row m-5 d-flex justify-content-center">
+  <div *ngFor="let product of products" class="card m-4" style="width: 25rem;">
+    <img src="https://img-monsternotebook.mncdn.com/UPLOAD/urun-gorselleri-yeni/a5-V19.1-resimler/thumb/V19.X-1650-EKRANKART_medium.png" class="card-img-top" alt="...">
+    <div class="card-body" id="cardBody">
+      <h5 class="card-title">{{product.productName}}</h5>
+      <p class="card-text" id="productDescription">
+        <li>{{product.productDescription.cpu}}</li>
+        <li>{{product.productDescription.gpu}}</li>
+        <li>{{product.productDescription.screen}}</li>
+        <li>{{product.productDescription.ram}}</li>
+        <li>{{product.productDescription.rom}}</li>
+        <li>{{product.productDescription.oSys}}</li>
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
+
