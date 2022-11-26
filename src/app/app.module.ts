@@ -8,6 +8,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { CategoryComponent } from './components/category/category.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductFilterPipe } from './Pipes/productPipe/product-filter.pipe';
+import { AlertifyService } from './services/alertify.service';
 
 
 @NgModule({
@@ -23,7 +24,7 @@ import { ProductFilterPipe } from './Pipes/productPipe/product-filter.pipe';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlertifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
