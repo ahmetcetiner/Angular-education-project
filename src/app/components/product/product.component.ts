@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { AlertifyService } from 'src/app/services/alertify.service'
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,7 @@ import { Product } from 'src/app/models/product';
 
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  constructor(private alertify:AlertifyService) { }
 
   filterText="";
 
@@ -74,6 +75,6 @@ export class ProductComponent implements OnInit {
   }
 
   addToCard(product:Product){
-    alert(product.productName+" add to card.")
+    this.alertify.success(product.productName+" add to card.")
   }
 }
