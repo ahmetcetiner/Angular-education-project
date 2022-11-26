@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
 
   constructor() { }
 
-  value = 'Clear me';
+  filterText="";
 
   products: Product[] = [
     {
@@ -73,4 +73,7 @@ export class ProductComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addToCard(product:Product){
+    alert(product.productName+" add to card.")
+  }
 }

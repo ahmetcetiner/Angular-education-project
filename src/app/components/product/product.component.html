@@ -6,13 +6,8 @@
 </ng-template>
 
 <div class="row d-flex p-2 justify-content-start">
-  <!--<mat-form-field class="example-form-field">
-    <input matInput type="text" [(ngModel)]="value">
-    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
-      <a>mamut</a>
-    </button>
-  </mat-form-field> -->
-  <div *ngFor="let product of products" class="card ms-3 mt-3" style="width: 19rem; height: 45rem;">
+  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="filterText">
+  <div *ngFor="let product of products | productFilter:filterText" class="card ms-3 mt-3" style="width: 19rem; height: 45rem;">
     <img
       src={{product.productImg}}
       class="card-img-top" alt="...">
@@ -27,7 +22,7 @@
         <li>{{product.property_6}}</li>
       </p>
       <h3 class="card-title mb-5 mt-5">{{product.productPrice}}</h3>
-      <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
+      <a (click)="addToCard(product)" class="btn btn-primary d-flex justify-content-center">Add to Card</a>
     </div>
   </div>
 </div>
