@@ -1,20 +1,33 @@
-<h3 *ngIf="products" class="m-5">{{title}}</h3>
+<h3 *ngIf="products; else noProduct" class="m-5"></h3>
+<ng-template #noProduct>
+  <div class="alert alert-warning m-5" role="alert">
+    Bu kategoride urun bulunmamaktadir.
+  </div>
+</ng-template>
 
-<div class="row m-5 d-flex justify-content-center">
-  <div *ngFor="let product of products" class="card m-4" style="width: 25rem;">
-    <img src="https://img-monsternotebook.mncdn.com/UPLOAD/urun-gorselleri-yeni/a5-V19.1-resimler/thumb/V19.X-1650-EKRANKART_medium.png" class="card-img-top" alt="...">
+<div class="row d-flex p-2 justify-content-start">
+  <!--<mat-form-field class="example-form-field">
+    <input matInput type="text" [(ngModel)]="value">
+    <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+      <a>mamut</a>
+    </button>
+  </mat-form-field> -->
+  <div *ngFor="let product of products" class="card ms-3 mt-3" style="width: 19rem; height: 45rem;">
+    <img
+      src={{product.productImg}}
+      class="card-img-top" alt="...">
     <div class="card-body" id="cardBody">
-      <h5 class="card-title">{{product.productName}}</h5>
-      <p class="card-text" id="productDescription">
-        <li>{{product.productDescription.cpu}}</li>
-        <li>{{product.productDescription.gpu}}</li>
-        <li>{{product.productDescription.screen}}</li>
-        <li>{{product.productDescription.ram}}</li>
-        <li>{{product.productDescription.rom}}</li>
-        <li>{{product.productDescription.oSys}}</li>
+      <h4 class="card-title mb-5 mt-5">{{product.productName}}</h4>
+      <p class="card-text mb-5" id="productDescription">
+        <li>{{product.property_1}}</li>
+        <li>{{product.property_2}}</li>
+        <li>{{product.property_3}}</li>
+        <li>{{product.property_4}}</li>
+        <li>{{product.property_5}}</li>
+        <li>{{product.property_6}}</li>
       </p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h3 class="card-title mb-5 mt-5">{{product.productPrice}}</h3>
+      <a href="#" class="btn btn-primary d-flex justify-content-center">Go somewhere</a>
     </div>
   </div>
 </div>
-
