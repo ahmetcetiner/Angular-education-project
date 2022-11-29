@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren } from '@angular/core';
 import { Category } from 'src/app/models/category';
+import { CategoryService } from 'src/app/services/categoryService/category.service';
+import { ProductService } from 'src/app/services/productService/product.service';
 
 @Component({
   selector: 'app-category',
@@ -8,16 +10,26 @@ import { Category } from 'src/app/models/category';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
-  categories ?: Category[]=[
-    {id:1,name:"Laptop"},
-    {id:2,name:"Mouse"},
-    {id:3,name:"Keyboad"},
-    {id:4,name:"Headset"},
-    {id:5,name:"Gamepad"},
-  ]
+  constructor(private category: CategoryService, private product:ProductService) { }
+  categories !: Category[]
 
   ngOnInit(): void {
+    this.category.getCategories().subscribe(data=>{
+      this.categories=data;
+      this.categories.forEach(element => {
+        this.getProductCount(element.id);
+      });
+    })
+  }
+
+  getProductCount(categoryID:number){
+    this.product.getProductByCategory(categoryID).subscribe(data=>{
+      this.categories[categoryID-1].productCount=data.length;
+    })
+  }
+
+  categoryClick(category:Category){
+    console.log(category.id)
   }
 
 }
