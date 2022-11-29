@@ -2,3 +2,7 @@ div{
   margin-top: 170px;
   display: block !important;
 }
+
+.hvr {
+  cursor: context-menu !important;
+}
