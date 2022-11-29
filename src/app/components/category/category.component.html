@@ -1,11 +1,11 @@
 <div>
   <ul class="list-group m-4">
-    <li class="list-group-item d-flex justify-content-between align-items-center ps-4">
+    <li class="list-group-item d-flex justify-content-between align-items-center ps-4 hvr" routerLink='product'>
       <h4>Categories</h4>
     </li>
-    <li class="list-group-item d-flex justify-content-between align-items-center ps-4" *ngFor="let category of categories">
+    <li class="list-group-item d-flex justify-content-between align-items-center ps-4 hvr" *ngFor="let category of categories" routerLink='product/category/{{category.id}}'>
       {{category.name}}
-      <span class="badge bg-primary rounded-pill">14</span>
+      <span class="badge bg-primary rounded-pill">{{category.productCount}}</span>
     </li>
   </ul>
 </div>
