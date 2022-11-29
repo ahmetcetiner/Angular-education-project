@@ -4,7 +4,7 @@
 @import "../node_modules/alertifyjs/build/css/alertify.min.css";
 @import "../node_modules/alertifyjs/build/css/themes/bootstrap.min.css";
 
-.container{
+.container,.pCard{
   margin-right: auto !important;
   margin-left: auto !important;
 }
