@@ -5,24 +5,30 @@
   </div>
 </ng-template>
 
-<div class="row d-flex p-2 justify-content-start pCard">
+<div class="row d-flex p-2 justify-content-start pCard ">
   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="filterText">
-  <div *ngFor="let product of products | productFilter:filterText" class="card ms-3 mt-3" style="width: 19rem; height: 45rem;">
-    <img
-      src={{product.productImg}}
-      class="card-img-top" alt="...">
+  <div *ngFor="let product of products | productFilter:filterText" class="card ms-3 mt-3"
+    style="width: 23rem; height: 50rem;">
     <div class="card-body" id="cardBody">
-      <h4 class="card-title mb-5 mt-5">{{product.productName}}</h4>
-      <p class="card-text mb-5" id="productDescription">
-        <li *ngIf="product.property_1">{{product.property_1}}</li>
-        <li *ngIf="product.property_2">{{product.property_2}}</li>
-        <li *ngIf="product.property_3">{{product.property_3}}</li>
-        <li *ngIf="product.property_4">{{product.property_4}}</li>
-        <li *ngIf="product.property_5">{{product.property_5}}</li>
-        <li *ngIf="product.property_6">{{product.property_6}}</li>
-      </p>
-      <h3 class="card-title mb-5 mt-5">{{product.productPrice}}</h3>
-      <a (click)="addToCard(product)" class="btn btn-primary d-flex justify-content-center">Add to Card</a>
+      <div class="row header">
+        <img src={{product.productImg}} class="card-img-top" alt="...">
+      </div>
+      <div class="row body">
+        <h4 class="card-title p-5">{{product.productName}}</h4>
+        <p class="card-text mb-5" id="productDescription">
+          <li *ngIf="product.property_1">{{product.property_1}}</li>
+          <li *ngIf="product.property_2">{{product.property_2}}</li>
+          <li *ngIf="product.property_3">{{product.property_3}}</li>
+          <li *ngIf="product.property_4">{{product.property_4}}</li>
+          <li *ngIf="product.property_5">{{product.property_5}}</li>
+          <li *ngIf="product.property_6">{{product.property_6}}</li>
+        </p>
+      </div>
+      <div class="row footer">
+        <h3 class="card-title mb-4 mt-4">{{product.productPrice}}<span class="d">,00</span><span class="pb1"> TL</span>&nbsp;<span id="ctl00_u24_ascUrunDetay_dtUrunDetay_ctl00_lbfURN_KDVDAHILSATIS">(KDV Dahil)</span></h3>
+        <a (click)="addToCard(product)" class="btn btn-primary d-flex justify-content-center">Add to Card</a>
+      </div>
+
     </div>
   </div>
 </div>

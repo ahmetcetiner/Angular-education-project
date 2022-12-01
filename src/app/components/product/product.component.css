@@ -1,6 +1,26 @@
-li{
+li {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  }
+}
+
+.header{
+  height: 100%;
+  max-height: 14rem;
+}
+.body{
+  height: 100%;
+  max-height: 24rem;
+}
+.footer{
+  height: 100%;
+  max-height: 9rem;
+}
+.card-img-top{
+  object-fit: cover !important;
+}
+.btn-primary{
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
