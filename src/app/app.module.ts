@@ -10,6 +10,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { ProductComponent } from './components/product/product.component';
 import { ProductFilterPipe } from './Pipes/productPipe/product-filter.pipe';
 import { AlertifyService } from './services/alertifyService/alertify.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AlertifyService } from './services/alertifyService/alertify.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [AlertifyService],
   bootstrap: [AppComponent]
