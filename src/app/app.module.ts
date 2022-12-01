@@ -11,6 +11,9 @@ import { ProductComponent } from './pages/product/product.component';
 import { ProductFilterPipe } from './Pipes/productPipe/product-filter.pipe';
 import { AlertifyService } from './services/alertifyService/alertify.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ClientBannerComponent } from './components/layout/client-banner/client-banner.component';
+import { ClientFooterComponent } from './components/layout/client-footer/client-footer.component';
+import { ClientLayoutComponent } from './components/layout/client-layout/client-layout.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CategoryComponent,
     ProductComponent,
     ProductFilterPipe,
+    ClientBannerComponent,
+    ClientFooterComponent,
+    ClientLayoutComponent,
   ],
   imports: [
     BrowserModule,
