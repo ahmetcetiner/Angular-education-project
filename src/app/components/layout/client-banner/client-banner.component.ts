@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DarkModeService } from 'angular-dark-mode';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-client-banner',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientBannerComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private darkModeService: DarkModeService) { }
+  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
   ngOnInit(): void {
   }
+  onToggle(): void {
 
+    this.darkModeService.toggle();
+  }
 }
