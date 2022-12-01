@@ -5,9 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
-import { NavComponent } from './components/nav/nav.component';
-import { CategoryComponent } from './components/category/category.component';
-import { ProductComponent } from './components/product/product.component';
+import { NavComponent } from './pages/nav/nav.component';
+import { CategoryComponent } from './pages/category/category.component';
+import { ProductComponent } from './pages/product/product.component';
 import { ProductFilterPipe } from './Pipes/productPipe/product-filter.pipe';
 import { AlertifyService } from './services/alertifyService/alertify.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
