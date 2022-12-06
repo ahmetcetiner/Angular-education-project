@@ -13,7 +13,7 @@
         <img src={{product.productImg}} class="card-img-top" alt="...">
       </div>
       <div class="row body">
-        <h4 class="card-title p-5">{{product.productName}}</h4>
+        <h4 class="card-title p-4">{{product.productName}}</h4>
         <p class="card-text mb-5" id="productDescription">
           <li *ngIf="product.property_1">{{product.property_1}}</li>
           <li *ngIf="product.property_2">{{product.property_2}}</li>
@@ -24,7 +24,7 @@
         </p>
       </div>
       <div class="row footer">
-        <h3 class="card-title mb-4 mt-4">{{product.productPrice}}<span class="d">,00</span><span class="pb1"> TL</span>&nbsp;<span id="ctl00_u24_ascUrunDetay_dtUrunDetay_ctl00_lbfURN_KDVDAHILSATIS">(KDV Dahil)</span></h3>
+        <h3 class="card-title mb-4 mt-4">{{product.productPrice}}<span class="d">,00</span><span> TL</span>&nbsp;<span class="kdv">(KDV Dahil)</span></h3>
         <a (click)="addToCard(product)" class="btn btn-primary d-flex justify-content-center">Add to Card</a>
       </div>
 

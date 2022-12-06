@@ -5,22 +5,32 @@ li {
   text-overflow: ellipsis;
 }
 
-.header{
+.header {
   height: 100%;
   max-height: 14rem;
+
 }
-.body{
+
+.body {
   height: 100%;
   max-height: 24rem;
 }
-.footer{
+
+.footer {
   height: 100%;
   max-height: 9rem;
 }
-.card-img-top{
+
+.card-img-top {
   object-fit: cover !important;
 }
-.btn-primary{
+
+.btn-primary {
   margin-top: auto !important;
   margin-bottom: auto !important;
+}
+
+.card {
+  padding: 0px;
+  --bs-card-border-width: 0px;
 }
