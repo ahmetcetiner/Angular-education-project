@@ -30,10 +30,81 @@
   top: -150%;
 }
 
-.toggle:checked + .toggle-label .sun {
+.toggle:checked+.toggle-label .sun {
   top: 150%;
 }
 
-.toggle:checked + .toggle-label .moon {
+.toggle:checked+.toggle-label .moon {
   top: 0;
+}
+
+.navbar {
+  padding: 0;
+  background: url(https://img-monsternotebook.mncdn.com/UPLOAD/BANNERS/listBanner/tum-laptoplar.png) right center / cover no-repeat;
+  min-height: 30rem;
+  min-width: 580px;
+}
+
+.container-fluid {
+  margin-top: 400px;
+  height: 5rem;
+}
+
+.nav-btn {
+  margin-left: 1rem;
+  border: 1px solid #495057;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  padding-inline-start: 2vw;
+  padding-inline-end: 2vw;
+
+}
+.nav-btn:hover{
+  border: 1px solid #26df2e;
+  color: #26df2e;
+}
+
+.search-box {
+  border-radius: 0px;
+  border: 1px solid #495057;
+  color: #26df2e;
+}
+
+.search-box:hover,
+.search-box:focus {
+  border-radius: 0px;
+  border: 1px solid #26df2e;
+  color: #26df2e;
+}
+
+.form-control {
+  margin: 0.5rem;
+  border-radius: 0px;
+  border: none;
+  outline: none !important;
+}
+
+.form-control:focus {
+  border-color: inherit;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.search-box:hover .srch,
+.form-control:focus-within {
+  content: url("../../../../assets/images/icons8_Search.ico");
+}
+
+.srch {
+  margin: 0.5rem;
+}
+
+[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 16px;
+  width: 16px;
+  background-image: url("../../../../assets/images/close.ico");
+  background-size: 16px 16px;
 }
